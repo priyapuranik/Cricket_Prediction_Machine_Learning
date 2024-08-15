@@ -26,3 +26,15 @@ After building and testing the models, I exported the trained model to a .pkl fi
 <li>Handles user input via forms on the HTML pages.</li><br>
 <li>Loads the trained machine learning model and performs predictions based on user input.</li><br>
 <li>Displays the prediction result, indicating which team is likely to win the match.</li><br>
+<br>
+<b>HTML Files</b><br>
+--index.html:<br>
+
+<li>Purpose: The main landing page of the application where users input the required match details.</li><br>
+<li>Structure: Includes fields for Batting Team, Bowling Team, City, Runs Left, Balls Left, Wickets Left, Total Runs, Current Run Rate, and Required Run Rate.</li><br>
+<li>Functionality: Sends the input data to the Flask backend for processing when the user clicks the "Predict" button.</li><br>
+<br>
+--result.html:<br>
+<li>Purpose: Displays the prediction result after processing the input data.</li><br>
+<li>Structure: Shows the output in a user-friendly format, indicating which team is predicted to win the match.</li><br>
+<li>Design: Styled with a cricket-themed background and enhanced font to make the prediction stand out in the center of the page.</li><br>
