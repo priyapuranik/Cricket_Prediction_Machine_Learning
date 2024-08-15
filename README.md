@@ -17,3 +17,12 @@ I built predictive models using both Random Forest and Decision Tree algorithms.
 4) Model Export<br>
 <li>Description:</li><br>
 After building and testing the models, I exported the trained model to a .pkl file format for deployment. This step allows the model to be easily loaded and used in a Flask application, enabling real-time predictions.<br>
+<br>
+<b>Flask Application</b><br>
+<li>Overview: The Flask web application serves as the interface for users to interact with the cricket match outcome prediction model. It processes the input provided by users, transforms it using the trained model, and displays the prediction result.</li><br>
+
+-- Features:
+
+<li>Handles user input via forms on the HTML pages.<br>
+Loads the trained machine learning model and performs predictions based on user input.<br>
+Displays the prediction result, indicating which team is likely to win the match.</li><br>
