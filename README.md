@@ -23,6 +23,6 @@ After building and testing the models, I exported the trained model to a .pkl fi
 
 -- Features:
 
-<li>Handles user input via forms on the HTML pages.<br>
-Loads the trained machine learning model and performs predictions based on user input.<br>
-Displays the prediction result, indicating which team is likely to win the match.</li><br>
+<li>Handles user input via forms on the HTML pages.</li><br>
+<li>Loads the trained machine learning model and performs predictions based on user input.</li><br>
+<li>Displays the prediction result, indicating which team is likely to win the match.</li><br>
