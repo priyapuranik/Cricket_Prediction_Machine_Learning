@@ -38,3 +38,26 @@ After building and testing the models, I exported the trained model to a .pkl fi
 <li>Purpose: Displays the prediction result after processing the input data.</li><br>
 <li>Structure: Shows the output in a user-friendly format, indicating which team is predicted to win the match.</li><br>
 <li>Design: Styled with a cricket-themed background and enhanced font to make the prediction stand out in the center of the page.</li><br>
+<br>
+<b>Deployment on AWS</b><br>
+<b>Overview: The project was successfully deployed on an Amazon Web Services (AWS) EC2 instance to make the cricket match outcome prediction model accessible online.</b><br>
+
+--Steps:
+
+a)Launch an EC2 Instance:
+
+<li>Selected an appropriate instance type (e.g., t2.micro) and configured security groups to allow HTTP (port 80) and custom ports (e.g., 8080) for the Flask application.</li>
+<li>Installed necessary dependencies such as Python, Flask, and scikit-learn.</li>
+b)Transfer Files:
+
+<li>Uploaded the project files, including the trained model (.pkl files), Flask application (app.py), and HTML files (index.html and result.html) to the EC2 instance.</li>
+c)Run the Flask Application:
+
+<li>Launched the Flask application on a specified port (e.g., 8080) using a command like python3 app.py --port=8080.</li>
+<li>Ensured that the application was accessible via the public IP address or DNS of the EC2 instance.</li>
+d)Security Group Configuration:
+
+<li>Configured security groups to allow traffic from any IP address (0.0.0.0/0) for the specified port used by the Flask application.</li>
+<li>Allowed inbound rules for HTTP (port 80) and the custom port (e.g., 8080) to make the application accessible.</li>
+<b>Result: The application was successfully deployed and could be accessed online, allowing users to interact with the prediction model through a web browser.</b>
+
