@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Match Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light cyan background (cricket-themed) */
+            color: #333; /* Dark gray text */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Ensure the result message can be positioned relative to body */
+            min-height: 100vh; /* Full viewport height */
+        }
+        h1 {
+            color: #00796b; /* Teal color for the header */
+            margin-top: 20px;
+        }
+        form {
+            background-color: #ffffff; /* White background for the form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            display: inline-block;
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #00796b; /* Teal button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #004d40; /* Darker teal on hover */
+        }
+        .result-message {
+            font-size: 1.5em; /* Larger font size for the result */
+            font-weight: bold;
+            background-color: #ffffff; /* White background for better readability */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            position: absolute;
+            right: 20px;
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust vertical alignment */
+        }
+    </style>
+</head>
+<body>
+    <h1>Cricket Match Outcome Predictor</h1>
+    <form action="/predict" method="post">
+        <label>Batting Team:</label>
+        <input type="text" name="batting_team" required><br><br>
+        <label>Bowling Team:</label>
+        <input type="text" name="bowling_team" required><br><br>
+        <label>City:</label>
+        <input type="text" name="city" required><br><br>
+        <label>Runs Left:</label>
+        <input type="number" name="runs_left" required><br><br>
+        <label>Balls Left:</label>
+        <input type="number" name="balls_left" required><br><br>
+        <label>Wickets Left:</label>
+        <input type="number" name="wickets_left" required><br><br>
+        <label>Total Runs:</label>
+        <input type="number" name="total_runs" required><br><br>
+        <label>Current Run Rate:</label>
+        <input type="number" name="crr" step="0.01" required><br><br>
+        <label>Required Run Rate:</label>
+        <input type="number" name="rrr" step="0.01" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    <h2 class="result-message">{{ prediction_text }}</h2>
+</body>
+</html>
